@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Parcel Sandbox</title>
+		<meta charset="UTF-8"/>
+	</head>
+	<body>
+		<button onclick="displayOne()">One</button>
+		<button onclick="displayTwo()">Two</button>
+		<div id="output"/>
+		<input type="text" onchange="handleInputChange(event)"/>
+		<script>
+		const outputDiv = document.getElementById("output");
+
+		function sayHi() {
+			console.log("hi");
+		}
+
+		function displayOne() {
+			outputDiv.innerHtml = "One";
+		}
+
+		function displayTwo() {
+			outputDiv.innerHtml = "Two";
+		}
+		
+		function handleInputChange(event) {
+			console.log(event.target.value);
+		}
+    </script>
+	</body>
+</html>
