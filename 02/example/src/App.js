@@ -1,8 +1,10 @@
 import './App.css';
 //import Button from '@mui/material/Button';
 //import Typography from '@mui/material/Typography';
-import { Button, Box, Typography } from '@mui/material/';
 import React, { useState } from 'react';
+import { Button, Box, Typography } from '@mui/material/';
+import { NumberButtons } from './components/NumberButtons';
+import { MuiInput } from './components/MuiInput';
 
 const App = () => {
   //const [show, setShow] = React.useState(true)
@@ -20,6 +22,8 @@ const App = () => {
         }}>
           <Button variant="contained" color="success" onClick={() => setShow(!show)}>Toggle popup { JSON.stringify(show) }</Button>
           <MimicPopup show={show} setShow={setShow}/>
+          <NumberButtons/>
+          <MuiInput/>
       </Box>
   );
 }
